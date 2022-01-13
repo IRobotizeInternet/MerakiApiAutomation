@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <Compile Remove="node_modules\**" />
+	  <EmbeddedResource Remove="node_modules\**" />
+	  <None Remove="node_modules\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Appium.WebDriver" Version="4.3.1" />
+		<PackageReference Include="MSTest.TestFramework" Version="2.2.8" />
+		<PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="97.0.4692.7100" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="Resources\app-debug.apk">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
+	
+	<Target Name="DebugEnsureNodeEnv" BeforeTargets="Build">
+		<!-- Ensure Node.js is installed -->
+		<Exec Command="node --version" ContinueOnError="true">
+			<Output TaskParameter="ExitCode" PropertyName="ErrorCode" />
+		</Exec>
+		<Error Condition="'$(ErrorCode)' != '0'" Text="Node.js is required to build and run this project. To continue, please install Node.js from https://nodejs.org/, and then restart your command prompt or IDE." />
+		<Message Importance="high" Text="Restoring dependencies using 'npm'. This may take several minutes..." />
+		<!--<Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
+		<Exec WorkingDirectory="$(SpaRoot)" Command="npm install -g appium" />
+		<Exec WorkingDirectory="$(SpaRoot)" Command="npm install download-chrome-driver" />-->
+	</Target>
+</Project>
