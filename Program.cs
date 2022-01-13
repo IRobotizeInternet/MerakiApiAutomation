@@ -35,7 +35,7 @@ namespace MerakiApiAutomation
 
 
 
-            //var _driver = AndroidDriverWrapper.Get();
+            var _driver = AndroidDriverWrapper.Get();
             var _driver = IOSDriverWrapper.Get();
             
             var element = _driver.FindElementById("com.meraki.mapidemo:id/apiKeyTxt");
