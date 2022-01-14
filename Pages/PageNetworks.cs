@@ -1,10 +1,8 @@
 ﻿using MerakiApiAutomation.Controls;
 using MerakiApiAutomation.Settings;
 using OpenQA.Selenium.Appium;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace MerakiApiAutomation.Pages
 {

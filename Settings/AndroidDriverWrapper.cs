@@ -1,11 +1,7 @@
-﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Appium;
+﻿using OpenQA.Selenium.Appium;
 using OpenQA.Selenium.Appium.Android;
-using OpenQA.Selenium.Appium.Enums;
-using OpenQA.Selenium.Remote;
 using System;
 using System.Collections.ObjectModel;
-using System.IO;
 using System.Linq;
 
 namespace MerakiApiAutomation.Settings

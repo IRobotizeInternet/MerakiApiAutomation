@@ -1,10 +1,4 @@
 ﻿using MerakiApiAutomation.Settings;
-using OpenQA.Selenium.Appium;
-using OpenQA.Selenium.Appium.Android;
-using OpenQA.Selenium.Appium.iOS;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace MerakiApiAutomation.Controls
 {

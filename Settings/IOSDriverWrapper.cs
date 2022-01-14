@@ -1,7 +1,5 @@
-﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Appium;
+﻿using OpenQA.Selenium.Appium;
 using OpenQA.Selenium.Appium.Enums;
-using OpenQA.Selenium.Appium.iOS;
 using System;
 using System.Collections.ObjectModel;
 using System.IO;

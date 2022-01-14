@@ -1,17 +1,6 @@
-﻿using MerakiApiAutomation.Settings;
-using OpenQA.Selenium.Appium;
-using OpenQA.Selenium.Appium.Android;
-using OpenQA.Selenium.Appium.Enums;
-using OpenQA.Selenium.Appium.iOS;
-using OpenQA.Selenium.Appium.Service;
-using OpenQA.Selenium.Appium.Service.Options;
-using OpenQA.Selenium.Appium.Windows;
-using OpenQA.Selenium.Remote;
+﻿using OpenQA.Selenium.Appium.iOS;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.IO;
-using System.Linq;
 
 namespace MerakiApiAutomation
 {
