@@ -1,11 +1,30 @@
-﻿1. Install Java 7 JDK
+<h3>Overview:</h3>
+This repo contains a framework to write the tests for Meraki demo app, and few blackbox tests. 
 
-2. Install Node.js
+ <h3>How it works</h3>
+ There are two projects in a solution:
+ 
+   * MerakiApiAutomation
+   * TestMerakiApi (Contains all the tests)
+   
+<b>MerakiApiAutomation</b>: 
+  This project consist of architecture and mapping of all the pages of the mobile app. It supports to write tests for android/IOS and it can be easily extended to add any other target mobile OS (windows). Here is the block diagram architecture:
+  * Controls (textbox, label, button, etc)
+  * Pages (Home screen, networks list, network details)
+  * Driver wrapper (It help to execute the tests in Android/IOS)
 
-3. Install Appium from the command line (skip if you install Appium Desktop)
-
-npm install -g appium
-
-4. Install Appium Desktop (optional)
-
-5. Install the Carthage dependency manager
+<b>TestMerakiApi</b>
+This project contains all the blackbox tests that will run using MerakiApiAutomation library components. Please note these tests are independent which environment they can run (android/IOS/Windows)
+  
+  
+<b>Software dependencies</b>
+* Install Java 7 JDK
+* Install Node.js
+* Visual Studio 2019 or above
+* Install Appium from the command line (skip if you install Appium Desktop)
+* npm install -g appium
+* Install Appium Desktop (optional)
+* Install the Carthage dependency manager
+* There are few other dependencies that will get installed automatically when we build the solution using nuget.
+  
+ 
