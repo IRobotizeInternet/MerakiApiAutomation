@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MerakiApiAutomation", "MerakiApiAutomation.csproj", "{A3ED26DF-70C1-45EE-953A-C9ED45F9BB70}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestMerakiApi", "..\TestMerakiApi\TestMerakiApi.csproj", "{461A1F27-2FCF-458E-83F1-782DDC68E08E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestMerakiApi", "TestMerakiApi\TestMerakiApi.csproj", "{CD3D70F1-BC28-4729-B675-F7F1F774206A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{A3ED26DF-70C1-45EE-953A-C9ED45F9BB70}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3ED26DF-70C1-45EE-953A-C9ED45F9BB70}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A3ED26DF-70C1-45EE-953A-C9ED45F9BB70}.Release|Any CPU.Build.0 = Release|Any CPU
-		{461A1F27-2FCF-458E-83F1-782DDC68E08E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{461A1F27-2FCF-458E-83F1-782DDC68E08E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{461A1F27-2FCF-458E-83F1-782DDC68E08E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{461A1F27-2FCF-458E-83F1-782DDC68E08E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD3D70F1-BC28-4729-B675-F7F1F774206A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD3D70F1-BC28-4729-B675-F7F1F774206A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD3D70F1-BC28-4729-B675-F7F1F774206A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD3D70F1-BC28-4729-B675-F7F1F774206A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
