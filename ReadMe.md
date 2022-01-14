@@ -9,6 +9,8 @@ This repo contains a framework to write the tests for Meraki demo app, and few b
    
 <b>MerakiApiAutomation</b>: 
   This project consist of architecture and mapping of all the pages of the mobile app. It supports to write tests for android/IOS and it can be easily extended to add any other target mobile OS (windows). Here is the block diagram architecture:
+  ![image](https://user-images.githubusercontent.com/83523058/149566078-aa365904-2b01-4e66-8679-9d801905c2ba.png)
+
   * Controls (textbox, label, button, etc)
   * Pages (Home screen, networks list, network details)
   * Driver wrapper (It help to execute the tests in Android/IOS)
