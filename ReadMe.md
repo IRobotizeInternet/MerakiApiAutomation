@@ -16,7 +16,6 @@ This repo contains a framework to write the tests for Meraki demo app, and few b
 <b>TestMerakiApi</b>
 This project contains all the blackbox tests that will run using MerakiApiAutomation library components. Please note these tests are independent which environment they can run (android/IOS/Windows)
   
-  
 <b>Software dependencies</b>
 * Install Java 7 JDK
 * Install Node.js
@@ -26,5 +25,7 @@ This project contains all the blackbox tests that will run using MerakiApiAutoma
 * Install Appium Desktop (optional)
 * Install the Carthage dependency manager
 * There are few other dependencies that will get installed automatically when we build the solution using nuget.
-  
- 
+
+
+![Demo1](https://user-images.githubusercontent.com/83523058/149564243-eee2b05d-2556-4112-a3d8-da051c51a625.gif)
+
