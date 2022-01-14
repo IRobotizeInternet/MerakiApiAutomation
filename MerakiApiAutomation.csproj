@@ -13,8 +13,8 @@
 
 	<ItemGroup>
 		<PackageReference Include="Appium.WebDriver" Version="4.3.1" />
-		<PackageReference Include="MSTest.TestFramework" Version="2.2.8" />
 		<PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="97.0.4692.7100" />
+		<PackageReference Include="System.Configuration.ConfigurationManager" Version="6.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>

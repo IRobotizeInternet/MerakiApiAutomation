@@ -1,36 +1,42 @@
-﻿using OpenQA.Selenium.Appium;
+﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Appium;
 using OpenQA.Selenium.Appium.Enums;
 using OpenQA.Selenium.Appium.iOS;
 using System;
+using System.Collections.ObjectModel;
 using System.IO;
 
 namespace MerakiApiAutomation.Settings
 {
-    public class IOSDriverWrapper : IOSDriver<IOSElement>, IDriver<IOSElement>
+    public class IOSDriverWrapper : IDriver
     {
-
-        private static IOSDriver<IOSElement> _driver;
-
-        public static IOSDriver<IOSElement> Get()
+        public static IOSDriverWrapper Get()
         {
-            if (_driver != null) return _driver;
-
-            string testAppPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources", "TestApp.app.zip");
+            string testAppPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources", "filePath");
             var appCapabilities = new AppiumOptions();
             appCapabilities.AddAdditionalCapability(MobileCapabilityType.DeviceName, "iPhone 6");
             appCapabilities.AddAdditionalCapability(MobileCapabilityType.PlatformName, "iOS");
             appCapabilities.AddAdditionalCapability(MobileCapabilityType.PlatformVersion, "11.3");
             appCapabilities.AddAdditionalCapability(MobileCapabilityType.App, testAppPath);
-            _driver = new IOSDriver<IOSElement>(new Uri("http://127.0.0.1:4723/wd/hub"), appCapabilities);
-            return _driver;
+            return new IOSDriverWrapper(new Uri("http://127.0.0.1:4723"), appCapabilities);
         }
 
-        public void PressKeyCode()
+        public void PressKeyCode(int keycode)
         {
-            Navigate().Back();
+            //Navigate().Back();
         }
 
-        public IOSDriverWrapper(Uri remoteAddress, AppiumOptions appCapabilities) : base(remoteAddress, appCapabilities)
+        public AppiumWebElement FindElementById(string id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public ReadOnlyCollection<AppiumWebElement> FindElementsById(string id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IOSDriverWrapper(Uri remoteAddress, AppiumOptions appCapabilities)
         {
 
         }

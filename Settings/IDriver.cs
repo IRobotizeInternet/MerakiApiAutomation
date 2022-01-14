@@ -1,24 +1,17 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Appium;
 using OpenQA.Selenium.Remote;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 
 namespace MerakiApiAutomation.Settings
 {
-    public interface IDriver<W>
+    
+    public interface IDriver
     {
-        public W FindElement(By by);
-        public W FindElement(string by, string value);
-        public W FindElementByAccessibilityId(string selector);
-        public W FindElementByClassName(string className);
-        public W FindElementByCssSelector(string cssSelector);
-        public W FindElementById(string id);
-        public W FindElementByImage(string base64Template);
-        public W FindElementByLinkText(string linkText);
-        public W FindElementByName(string name);
-        public W FindElementByPartialLinkText(string partialLinkText);
-        public W FindElementByTagName(string tagName);
-        public W FindElementByXPath(string xpath);
-        public void PressKeyCode();
+        public AppiumWebElement FindElementById(string id);
+        public ReadOnlyCollection<AppiumWebElement> FindElementsById(string id);
+        public void PressKeyCode(int keycode);
     }
 }

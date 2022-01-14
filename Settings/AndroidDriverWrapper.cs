@@ -1,32 +1,49 @@
-﻿using OpenQA.Selenium.Appium;
+﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Appium;
 using OpenQA.Selenium.Appium.Android;
 using OpenQA.Selenium.Appium.Enums;
+using OpenQA.Selenium.Remote;
 using System;
+using System.Collections.ObjectModel;
 using System.IO;
+using System.Linq;
 
 namespace MerakiApiAutomation.Settings
 {
-    public class AndroidDriverWrapper : AndroidDriver<AndroidElement>, IDriver<AndroidElement>
+    public class AndroidDriverWrapper : AndroidDriver<AndroidElement>, IDriver
     {
-        public static AndroidDriverWrapper Get()
+        public static AndroidDriverWrapper Driver;
+        //private static AndroidDriverWrapper Get()
+        //{
+        //    if (Driver != null) return Driver;
+        //    string appPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources", "app-debug.apk");
+        //    var appCapabilities = new AppiumOptions();
+        //    appCapabilities.AddAdditionalCapability(MobileCapabilityType.PlatformName, "Android");
+        //    appCapabilities.AddAdditionalCapability(MobileCapabilityType.DeviceName, "Android 29");
+        //    appCapabilities.AddAdditionalCapability(MobileCapabilityType.App, appPath);
+        //    appCapabilities.AddAdditionalCapability(MobileCapabilityType.AutomationName, "UiAutomator2");
+        //    appCapabilities.AddAdditionalCapability("chromedriverExecutable", ".");
+        //    appCapabilities.AddAdditionalCapability(AndroidMobileCapabilityType.AppWaitActivity, "com.meraki.*");
+        //    return new AndroidDriverWrapper(new Uri("http://127.0.0.1:4723"), appCapabilities);
+        //}
+
+        public void PressKeyCode(int keycode)
         {
-            string appPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources", "app-debug.apk");
-            var appCapabilities = new AppiumOptions();
-            appCapabilities.AddAdditionalCapability(MobileCapabilityType.PlatformName, "Android");
-            appCapabilities.AddAdditionalCapability(MobileCapabilityType.DeviceName, "Android 29");
-            appCapabilities.AddAdditionalCapability(MobileCapabilityType.App, appPath);
-            appCapabilities.AddAdditionalCapability(MobileCapabilityType.AutomationName, "UiAutomator2");
-            appCapabilities.AddAdditionalCapability("chromedriverExecutable", ".");
-            appCapabilities.AddAdditionalCapability(AndroidMobileCapabilityType.AppWaitActivity, "com.meraki.*");
-            return new AndroidDriverWrapper(new Uri("http://127.0.0.1:4723"), appCapabilities);
+            //base.PressKeyCode(keycode);
         }
 
-        public void PressKeyCode()
+        public AppiumWebElement FindElementById(string id)
         {
-            PressKeyCode(AndroidKeyCode.Back);
+            return base.FindElementById(id);
         }
 
-        public AndroidDriverWrapper(Uri remoteAddress, AppiumOptions appCapabilities) : base(remoteAddress, appCapabilities)
+        public ReadOnlyCollection<AppiumWebElement> FindElementsById(string id)
+        {
+            var elements = base.FindElementsById(id).ToList<AppiumWebElement>();
+            return new ReadOnlyCollection<AppiumWebElement>(elements);
+        }
+
+        public AndroidDriverWrapper(Uri remoteAddress, AppiumOptions appCapabilities) : base (remoteAddress, appCapabilities)
         {
 
         }
