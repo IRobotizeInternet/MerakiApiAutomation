@@ -10,7 +10,7 @@ This repo contains a framework to write the tests for Meraki demo app, and few b
 <b>MerakiApiAutomation</b>: 
   This project consist of architecture and mapping of all the pages of the mobile app. It supports to write tests for android/IOS and it can be easily extended to add any other target mobile OS (windows). Here is the block diagram architecture:
   ![image](https://user-images.githubusercontent.com/83523058/149566078-aa365904-2b01-4e66-8679-9d801905c2ba.png)
-
+  
   * Controls (textbox, label, button, etc)
   * Pages (Home screen, networks list, network details)
   * Driver wrapper (It help to execute the tests in Android/IOS)
@@ -29,5 +29,11 @@ This project contains all the blackbox tests that will run using MerakiApiAutoma
 * There are few other dependencies that will get installed automatically when we build the solution using nuget.
 
 
+I have created a demo video here. 
+[![Here is my explaination on Youtube](https://user-images.githubusercontent.com/83523058/149571007-a932679d-1030-4f47-b6a9-45ad496bb623.png)](https://www.youtube.com/watch?v=4HGH-wuuZsA)
+https://www.youtube.com/watch?v=4HGH-wuuZsA
+
+
+I could not able to run the automation demo while recording my machine keep crashing when running tests for IOS using emulator for windows.
 ![Demo1](https://user-images.githubusercontent.com/83523058/149564243-eee2b05d-2556-4112-a3d8-da051c51a625.gif)
 
